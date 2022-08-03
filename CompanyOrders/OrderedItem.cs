@@ -9,6 +9,12 @@ namespace CompanyOrders
     internal class OrderedItem
     {
         public int Qty { get; set; }
-        public Item item { get; set; } = new Item();
+        public Item item { get; set; }
+        public int GetAmt()
+        {
+            return Qty*item.Rate;
+        } 
+
     }
 }
+

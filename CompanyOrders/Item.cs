@@ -9,7 +9,7 @@ namespace CompanyOrders
     internal class Item
     {
         public string Description { get; set; }
-        public double Rate { get; set; }
+        public int Rate { get; set; }
 
     }
 }

@@ -16,22 +16,8 @@ namespace CompanyOrders
             double total=0;
             foreach (Customer customer in customers)
             {
-                foreach(Order order in customer.OrderList)
-                {
-                    foreach(OrderedItem orderedItem in order.orderedItems)
-                    {
-                        total += orderedItem.Qty * orderedItem.item.Rate;
-                    }
-                }          
-                if (customer is RegCustomer)
-                {
-                    RegCustomer reg = customer as RegCustomer;
-                    double totalDiscount = 0;
-                    totalDiscount = (reg.Discount * total) / 100;
-                    total = total - totalDiscount;
-                }
+                total += customer.GetOrderedAmt();
             }
-
             return total;
         } 
     }

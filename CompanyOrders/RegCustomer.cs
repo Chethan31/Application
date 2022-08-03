@@ -9,5 +9,11 @@ namespace CompanyOrders
     internal class RegCustomer:Customer
     {
         public double Discount { get; set; }
+        public override double GetOrderedAmt()
+        {
+            double totAmt = base.GetOrderedAmt();
+            double totDisc = totAmt * Discount / 100;
+            return totAmt - totDisc;
+        }
     }
 }
