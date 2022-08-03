@@ -2,11 +2,11 @@
 
 Company company = new Company();
 Item i1= new Item {Rate=10};
-Item i2= new Item {Rate=10};        
-Item i3= new Item {Rate=10}; 
-Item i4= new Item {Rate=10};
-Item i5= new Item {Rate=10};
-Item i6= new Item {Rate=10};
+Item i2= new Item {Rate=20};        
+Item i3= new Item {Rate=30}; 
+Item i4= new Item {Rate=40};
+Item i5= new Item {Rate=50};
+Item i6= new Item {Rate=60};
 
 company.items.Add(i1);
 company.items.Add(i2);
